@@ -46,9 +46,9 @@ public class Main {
         System.out.println("Strength - " + teams.get(1).getStrength());
 
         System.out.println();
-        teams.get(2).teamTraining();
+        teams.get(2).teamTrain();
         teams.get(2).teamRest();
-        teams.get(2).teamTraining();
+        teams.get(2).teamTrain();
         teams.get(2).addPlayer("Xxxx", 99, 9, 4);
         teams.get(2).showPlayers();
         System.out.println("Strength - " + teams.get(2).getStrength());

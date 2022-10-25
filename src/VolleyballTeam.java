@@ -3,7 +3,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class VolleyballTeam {
+public class VolleyballTeam implements TeamTrainable{
     private String name;
     private String stadium;
     private String coach;
@@ -105,12 +105,14 @@ public class VolleyballTeam {
         this.strength /= players.size();
     }
 
-    public void teamTraining() {
+    @Override
+    public void teamTrain() {
         for (VolleyballPlayer player: players) player.train();
         calculateStrength();
         writePlayers();
     }
 
+    @Override
     public void teamRest() {
         for (VolleyballPlayer player: players) player.rest();
         writePlayers();
